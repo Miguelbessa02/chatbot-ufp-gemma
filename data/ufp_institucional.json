@@ -1,0 +1,62 @@
+{
+  "nome": "Universidade Fernando Pessoa",
+  "visao": "Ser reconhecida como uma Universidade que inova no conhecimento e nos métodos de ensinar...",
+  "missao": "A UFP assume como sua missão primeira o ensino sustentado em honesto estudo e permanente atualização científica...",
+  "valores": [
+    "Tolerância",
+    "Interdisciplinaridade",
+    "Inovação",
+    "Ética",
+    "Declaração Universal dos Direitos Humanos"
+  ],
+  "historia": "A Universidade Fernando Pessoa (UFP), instituída pela Fundação Ensino e Cultura Fernando Pessoa (FFP)...",
+  "faculdades": [
+    "Faculdade de Ciência e Tecnologia",
+    "Faculdade de Ciências Humanas e Sociais",
+    "Faculdade de Ciências da Saúde",
+    "UFP-UV – centro de formação à distância"
+  ],
+  "infraestrutura": "Campus moderno, laboratórios, hospital universitário, clínicas pedagógicas, bibliotecas...",
+  "hospital": "O Hospital Fernando Pessoa é uma unidade multifuncional de cuidados de saúde com função pedagógica...",
+  "responsabilidade_social": [
+    "Projeto PASOP – Saúde Oral e Pública",
+    "Clínica de Psicologia",
+    "Praxes solidárias",
+    "Projeto + Leitura, + Saúde",
+    "Clínica de Fisioterapia"
+  ],
+  "internacionalizacao": "O Gabinete de Relações Internacionais (GRI) coordena os programas de mobilidade e parcerias internacionais...",
+  "qualidade": {
+    "sistema": "Sistema Interno de Garantia da Qualidade (SIGQ)",
+    "certificacoes": "ISO 9001:2015, ENQA Guidelines",
+    "documentos": [
+      "Manual da Qualidade",
+      "Política da Qualidade"
+    ]
+  },
+  "premios_distincoes": [
+    "Prémio Iberoamericano a la Excelencia Educativa (2005)",
+    "Ranking U-Multirank – 2ª melhor universidade portuguesa em investigação (2014)",
+    "Notas “A” no U-Multirank (2015)"
+  ],
+  "honoris_causa": [
+    "Paul Ekman",
+    "Federico Mayor Zaragoza",
+    "José Rincon Ferreira",
+    "Yury Zinchenko",
+    "Jeffrey K. Zeig"
+  ],
+  "reitor": "Prof. Doutor Álvaro Nascimento",
+  "patrono": "Fernando Pessoa",
+  "trabalhar_na_ufp": {
+    "info": "A UFP aceita candidaturas espontâneas para áreas como Docência, Administração, Técnica, Estágios...",
+    "contacto": "via candidatura espontânea ou concursos públicos"
+  },
+  "regulamentos_links": [
+    "Estatutos UFP",
+    "Normas de acesso",
+    "Regulamento do Ensino à Distância",
+    "Regulamento da Biblioteca",
+    "Regulamento das provas de doutoramento"
+  ]
+}
