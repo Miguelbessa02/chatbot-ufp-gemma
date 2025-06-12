@@ -5,7 +5,6 @@ from datasets import Dataset
 from transformers import AutoTokenizer, AutoModelForCausalLM, TrainingArguments
 from peft import prepare_model_for_kbit_training, LoraConfig, get_peft_model
 from trl import SFTTrainer
-from transformers import BitsAndBytesConfig
 
 # === Configurações ===
 MODEL_NAME = "google/gemma-2b"
@@ -14,20 +13,6 @@ DATA_FILE = "../data/qa_ufp_finetune.jsonl"
 BATCH_SIZE = 2
 EPOCHS = 3
 MAX_SEQ_LENGTH = 512
-
-
-bnb_config = BitsAndBytesConfig(
-    load_in_4bit=True,
-    bnb_4bit_compute_dtype=torch.float16,
-    bnb_4bit_use_double_quant=True,
-    bnb_4bit_quant_type="nf4"
-)
-
-model = AutoModelForCausalLM.from_pretrained(
-    MODEL_NAME,
-    quantization_config=bnb_config,
-    device_map="auto"
-)
 
 # === 1. Carregamento do modelo e tokenizer ===
 print("🔁 A carregar modelo e tokenizer...")
@@ -38,7 +23,7 @@ model = AutoModelForCausalLM.from_pretrained(
     low_cpu_mem_usage=True
 )
 
-model.to_empty(device="cuda" if torch.cuda.is_available() else "cpu")
+model.to_empty(device="cuda" if torch.cuda.is_available() else "cpu")  # Evita erro com meta tensors
 model = prepare_model_for_kbit_training(model)
 
 # === 2. Configuração LoRA ===
@@ -70,7 +55,7 @@ def formatting_func(example):
 print("🚀 A iniciar treino LoRA...")
 training_args = TrainingArguments(
     output_dir=OUTPUT_DIR,
-    per_device_train_batch_size=1,
+    per_device_train_batch_size=BATCH_SIZE,
     num_train_epochs=EPOCHS,
     logging_dir=f"{OUTPUT_DIR}/logs",
     save_strategy="epoch",
